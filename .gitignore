@@ -1,0 +1,5 @@
+.pyc
+screenshot/**
+extract/in/**
+extract/out/**
+test_scripts/**

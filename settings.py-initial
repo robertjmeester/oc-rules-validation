@@ -1,0 +1,25 @@
+import time
+
+# OC: Dictionary that holds the details about the OpenClinica instance that we want to use 
+OC = {'URL'     : "http://127.0.0.1/OC_INSTANCE/",
+      'USER'    : "USER",
+      'PWD'     : "PASSWORD",
+      'STUDY'   : "STUDY"}
+
+# PATH: path to the root folder for screenshots and test scripts
+# It is possible to separate these if wanted
+PATH = '/my_path/rules/'
+
+# REPORT_ROOT: root folder for the generated reports
+REPORT_ROOT ='/path_to_reports_folder'
+
+# PATHS: dictionary that holds the paths that are expected 
+PATHS = {'REPORTS'      : "%s/%s" % (REPORT_ROOT, time.strftime("%Y_%m_%d_%H_%M")),
+         'OVERVIEW'     : "%s" % (REPORT_ROOT),
+         'SCREENSHOTS'  : "%s/%s" % (PATH, "screenshots"),
+         'TEST_SCRIPTS' : "%s/%s" % (PATH, "test_scripts/") }
+
+# TESTXLS: A list that holds names of test files. The name should be the name
+# of the test file in the folder PATHS['TEST_SCRIPTS'] without the xls extension. 
+# Leave it empty to run all the test files in the folder PATHS['TEST_SCRIPTS']
+TESTSXLS = []
