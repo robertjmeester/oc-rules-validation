@@ -16,11 +16,12 @@ Installation:
 Usage:
 - download OC rules in Excel format. I suggest to do this in managable chunks, for example you can download them per page. It helps if your rules start with a descriptive prefix, like 'AE' for adverse event rules, or 'DEM' for rules on the demography page.
 - transform the rules Excel sheet into an Excel test script by running the utility extract_rules.py, like so: 
-"python extract_rules.py path/to/rules.xls /path/to/test_script.xls"
+```python extract_rules.py path/to/rules.xls /path/to/test_script.xls```
 - enter the test values in the Excel script (see below)
 - copy the test script(s) to the folder "test_scripts"
 - run the validation. like so:
-"python validate_rules.py" (see below)
+```python validate_rules.py``` 
+(see below)
 - find the results in the output folder as specified in settings.py
 
 TODO: add instructions for Excel test script
