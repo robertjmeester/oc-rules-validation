@@ -1,2 +1,3 @@
-# oc-rules-validation
-Validation tool for OpenClinica rules
+oc-rules-validation
+# Validation tool for OpenClinica rules
+
