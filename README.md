@@ -22,3 +22,6 @@ Usage:
 - run the validation. like so:
 "python validate_rules.py" (see below)
 - find the results in the output folder as specified in settings.py
+
+TODO: add instructions for Excel test script
+TODO: add instructions for selecting which test files to run 
