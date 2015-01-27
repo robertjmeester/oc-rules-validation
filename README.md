@@ -25,4 +25,5 @@ Usage:
 - find the results in the output folder as specified in settings.py
 
 TODO: add instructions for Excel test script
-TODO: add instructions for selecting which test files to run 
+TODO: add instructions for selecting which test files to run
+TODO: add instructions for crontab
