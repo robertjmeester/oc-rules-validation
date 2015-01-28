@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="OpenClinica rules validation : Validation tool for OpenClinica rules">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>OpenClinica rules validation</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/robertmeester/oc-rules-validation">View on GitHub</a>
+
+          <h1 id="project_title">OpenClinica rules validation</h1>
+          <h2 id="project_tagline">Validation tool for OpenClinica rules</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/robertmeester/oc-rules-validation/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/robertmeester/oc-rules-validation/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Installation:</p>
+
+<ul>
+<li>install Python (<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>)</li>
+<li>install virtualenv, if you want to keep this tool isolated (<a href="https://virtualenv.pypa.io/en/latest/">https://virtualenv.pypa.io/en/latest/</a>)</li>
+<li>install headless firefox (apt-get install xvfb firefox / yum install Xvfb firefox)</li>
+<li>clone this repository</li>
+<li>if installed, activate your virtualenv</li>
+<li>install requirements (pip install -r requirements.txt)</li>
+<li>copy settings.py-initial to settings.py, edit settings.py to reflect your environment</li>
+</ul>
+
+<p>Usage:</p>
+
+<ul>
+<li>download OC rules in Excel format. I suggest to do this in managable chunks, for example you can download them per page. It helps if your rules start with a descriptive prefix, like 'AE' for adverse event rules, or 'DEM' for rules on the demography page.</li>
+<li>transform the rules Excel sheet into an Excel test script by running the utility extract_rules.py, like so: 
+<code>python extract_rules.py path/to/rules.xls /path/to/test_script.xls</code>
+</li>
+<li>enter the test values in the Excel script (see below)</li>
+<li>copy the test script(s) to the folder "test_scripts"</li>
+<li>run the validation. like so:
+<code>python validate_rules.py</code> 
+(see below)</li>
+<li>find the results in the output folder as specified in settings.py</li>
+</ul>
+
+<p>TODO: add instructions for Excel test script
+TODO: add instructions for selecting which test files to run
+TODO: add instructions for crontab</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">OpenClinica rules validation maintained by <a href="https://github.com/robertmeester">robertmeester</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-59041279-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
